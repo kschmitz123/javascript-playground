@@ -1,8 +1,8 @@
-import "./albums.css";
-import albums from "./albums.html";
+import { createAlbumElement } from "./albums";
 
-export default { title: "Components/ Albums" };
+export default {
+  title: "Components/Albums",
+  parameters: { layout: "centered" },
+};
 
-export const Albums = () => albums;
-
-import { createTrackElement } from "./albums";
+export const History = () => createAlbumElement();

@@ -3,12 +3,12 @@
   width: 100%;
 }
 
-.album-info {
+.album__info {
   display: flex;
   justify-content: space-between;
   color: #c1c0c0;
 }
-.album-title {
+.album__title {
   font-weight: 500;
   padding: 0.5rem 0;
   color: #eeeeee;
