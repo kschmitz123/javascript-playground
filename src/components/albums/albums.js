@@ -1,23 +1,24 @@
 import "./albums.css";
-import albumImgHistory from "../../assets/history-album.png";
 
-export function createAlbumElement() {
+export function createAlbumElement(album) {
   const albumElement = document.createElement("div");
-  albumElement.className = "album";
   const albumImg = document.createElement("img");
-  albumImg.src = albumImgHistory;
   const albumInfoLine = document.createElement("div");
-  albumInfoLine.className = "album__info";
   const albumTitleLine = document.createElement("div");
+  const albumTitle = document.createElement("span");
+  const albumArtist = document.createElement("span");
+  const albumSongs = document.createElement("span");
+  const albuminfoBtn = document.createElement("span");
+  albumImg.src = album.imgSrc;
+  albumImg.alt = "Image of " + album.artist;
+
+  albumElement.className = "album";
+  albumInfoLine.className = "album__info";
   albumTitleLine.className = "album__title";
 
-  const albumTitle = document.createElement("span");
-  albumTitle.innerText = "History";
-  const albumArtist = document.createElement("span");
-  albumArtist.innerText = "Michael Jackson";
-  const albumSongs = document.createElement("span");
-  albumSongs.innerText = "10 Songs";
-  const albuminfoBtn = document.createElement("span");
+  albumTitle.innerText = album.title;
+  albumArtist.innerText = album.artist;
+  albumSongs.innerText = album.numberSongs;
   albuminfoBtn.innerHTML = "&#8942";
 
   albumElement.append(albumImg, albumInfoLine, albumTitleLine);
