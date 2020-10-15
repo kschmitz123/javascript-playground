@@ -6,19 +6,29 @@ export default {
   title: "Components/Albums",
   parameters: { layout: "centered" },
 };
-
-export const History = (album) =>
-  createAlbumElement({
+export const albums = () => {
+  const History = {
     title: "History",
     artist: "Michael Jackson",
     imgSrc: albumImgHistory,
     numberSongs: "10 Songs",
-  });
+  };
 
-export const Thriller = (album) =>
-  createAlbumElement({
+  const Thriller = {
     title: "Thriller",
     artist: "Michael Jackson",
     imgSrc: albumImgThriller,
     numberSongs: "10Songs",
+  };
+
+  const container = document.createElement("div");
+
+  const albumlist = [History, Thriller];
+
+  albumlist.forEach((album) => {
+    const albumElement = createAlbumElement(album);
+    container.append(albumElement);
   });
+
+  return container;
+};
