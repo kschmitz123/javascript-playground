@@ -1,29 +1,39 @@
 import "./albums.css";
+import { createElement } from "../../assets/components";
 
-export function createAlbumElement(album) {
-  const albumElement = document.createElement("div");
-  const albumImg = document.createElement("img");
-  const albumInfoLine = document.createElement("div");
-  const albumTitleLine = document.createElement("div");
-  const albumTitle = document.createElement("span");
-  const albumArtist = document.createElement("span");
-  const albumSongs = document.createElement("span");
-  const albuminfoBtn = document.createElement("span");
-  albumImg.src = album.imgSrc;
-  albumImg.alt = "Image of " + album.artist;
-
-  albumElement.className = "album";
-  albumInfoLine.className = "album__info";
-  albumTitleLine.className = "album__title";
-
-  albumTitle.innerText = album.title;
-  albumArtist.innerText = album.artist;
-  albumSongs.innerText = album.numberSongs;
-  albuminfoBtn.innerHTML = "&#8942";
-
-  albumElement.append(albumImg, albumInfoLine, albumTitleLine);
-  albumInfoLine.append(albumArtist, albuminfoBtn);
-  albumTitleLine.append(albumTitle, albumSongs);
+export const createAlbumElement = (album) => {
+  const albumImg = createElement("img", {
+    src: album.imgSrc,
+    alt: "Image of " + album.artist,
+  });
+  const albumElement = createElement("div", {
+    className: "album",
+    children: [
+      albumImg,
+      createElement("div", {
+        className: "album__info",
+        children: [
+          createElement("span", {
+            innerText: album.artist,
+          }),
+          createElement("span", {
+            innerHTML: "&#8942",
+          }),
+        ],
+      }),
+      createElement("div", {
+        className: "album__title",
+        children: [
+          createElement("span", {
+            innerText: album.title,
+          }),
+          createElement("span", {
+            innerText: album.numberSongs,
+          }),
+        ],
+      }),
+    ],
+  });
 
   return albumElement;
-}
+};
