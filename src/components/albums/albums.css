@@ -1,3 +1,8 @@
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 16px;
+}
 .album {
   font-size: 0.7rem;
   width: 100%;

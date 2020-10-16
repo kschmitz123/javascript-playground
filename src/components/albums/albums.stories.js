@@ -1,6 +1,8 @@
 import { createAlbumElement } from "./albums";
+import { createElement } from "../../assets/components";
 import albumImgHistory from "../../assets/history-album.png";
 import albumImgThriller from "../../assets/thriller-album.png";
+import albumImgBeyonce from "../../assets/beyonce-album.png";
 
 export default {
   title: "Components/Albums",
@@ -18,12 +20,21 @@ export const albums = () => {
     title: "Thriller",
     artist: "Michael Jackson",
     imgSrc: albumImgThriller,
-    numberSongs: "10Songs",
+    numberSongs: "10 Songs",
   };
 
-  const container = document.createElement("div");
+  const Beyonce = {
+    title: "I am...yours",
+    artist: "Beyonce",
+    imgSrc: albumImgBeyonce,
+    numberSongs: "10 Songs",
+  };
 
-  const albumlist = [History, Thriller];
+  const container = createElement("div", {
+    className: "album-grid",
+  });
+
+  const albumlist = [History, Thriller, Beyonce];
 
   albumlist.forEach((album) => {
     const albumElement = createAlbumElement(album);
