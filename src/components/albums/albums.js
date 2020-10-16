@@ -14,7 +14,7 @@ export const createAlbumElement = (album) => {
         className: "album__info",
         children: [
           createElement("span", {
-            innerText: album.artist,
+            innerText: album.title,
           }),
           createElement("span", {
             innerHTML: "&#8942",
@@ -25,7 +25,7 @@ export const createAlbumElement = (album) => {
         className: "album__title",
         children: [
           createElement("span", {
-            innerText: album.title,
+            innerText: album.artist,
           }),
           createElement("span", {
             innerText: album.numberSongs,
