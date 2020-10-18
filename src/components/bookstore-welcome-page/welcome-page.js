@@ -1,6 +1,7 @@
 import "./welcome-page.css";
-import { createElement } from "../../assets/utils/elements";
 import page1Img from "../../assets/background-page1.svg";
+
+import { createElement } from "../../assets/utils/elements";
 
 export const createPageElement = () => {
   const PageElement = createElement("div", {
