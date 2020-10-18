@@ -1,0 +1,36 @@
+.page {
+  min-height: 568px;
+  /* padding: 0 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+.page-heading {
+  margin: 0;
+  color: #5abd8c;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+.page-info {
+  margin: 0;
+  color: #5abd8cbf;
+  font-size: 0.9rem;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  background: #5abd8c;
+  border-radius: 50%;
+}
+.navbar {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+.page > img {
+  width: 100%;
+  padding: 0 10px;
+}

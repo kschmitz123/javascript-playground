@@ -18,18 +18,19 @@ export const createPageElement = () => {
         src: page1Img,
       }),
       createElement("div", {
+        className: "navbar",
         children: [
-          createElement("span", {
-            innerHTML: "&#8729;",
+          createElement("div", {
+            className: "circle",
           }),
-          createElement("span", {
-            innerHTML: "&#8729;",
+          createElement("div", {
+            className: "circle",
           }),
-          createElement("span", {
-            innerHTML: "&#8729;",
+          createElement("div", {
+            className: "circle",
           }),
-          createElement("span", {
-            innerHTML: "&#8729;",
+          createElement("div", {
+            className: "circle",
           }),
         ],
       }),
