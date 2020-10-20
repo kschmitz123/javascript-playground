@@ -1,22 +1,21 @@
 import "./welcome-page.css";
-import page1Img from "../../assets/background-page1.svg";
 
 import { createElement } from "../../assets/utils/elements";
 
-export const createPageElement = () => {
+export const createPageElement = (page) => {
   const PageElement = createElement("div", {
     className: "page",
     children: [
       createElement("h1", {
         className: "page-heading",
-        innerText: "Discounted Secondhand Books",
+        innerText: page.heading,
       }),
       createElement("p", {
         className: "page-info",
-        innerText: "Used and near new secondhand books at great prices.",
+        innerText: page.info,
       }),
       createElement("img", {
-        src: page1Img,
+        src: page.img,
       }),
       createElement("div", {
         className: "navbar",
